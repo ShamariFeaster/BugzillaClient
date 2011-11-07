@@ -2,4 +2,13 @@
 <resources>
     <string name="hello">Hello World, BugzillaClientActivity!</string>
     <string name="app_name">Bugzilla Client</string>
+    <string name="server_name">Server URL</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="store_prefs">Store Preferences</string>
+    <string name="login_button">Login</string>
+    <string name="setting_button">Settings</string>
+    <string name="see_my_bugs_button">See My Bugs</string>
+    <string name="browse_bugs_by_product_button">Borwse Bugs By Product</string>
+    <string name="report_bug_button">Report A Bug</string>
 </resources>
