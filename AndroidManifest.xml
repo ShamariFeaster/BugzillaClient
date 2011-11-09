@@ -17,7 +17,7 @@
 
         </activity>
         <activity
-            android:name=".SettingsScreen">
+            android:name=".LoginScreen">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"></action>
@@ -25,6 +25,12 @@
                     android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
+        <activity android:name=".DisplayBugs"></activity>
+        <activity android:name=".DisplayProducts"></activity>
+        <activity android:name=".HomeScreen"></activity>
+        <activity android:name=".ReportBug"></activity>
+        <activity android:name=".SettingsScreen"></activity>
+        <activity android:name=".ShowBug"></activity>
 
     </application>
 </manifest>

@@ -11,4 +11,5 @@
     <string name="see_my_bugs_button">See My Bugs</string>
     <string name="browse_bugs_by_product_button">Borwse Bugs By Product</string>
     <string name="report_bug_button">Report A Bug</string>
+    <string name="server_tooltip">Server Url must start with \"http://\" and end with a trailing \"/\"</string>
 </resources>
