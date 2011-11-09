@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:text="@string/server_name"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/serverUrlTextView"></TextView>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/serverToolTipTextView"
+        android:text="@string/server_tooltip"
+        android:textSize="11dip"
+        android:layout_gravity="center_horizontal"></TextView>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/serverUrlEditText">
+        <requestFocus></requestFocus>
+    </EditText>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/user_name"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/UserNameTextView"></TextView>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/UserNameEditText"></EditText>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/password"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/PasswordTextView"></TextView>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:id="@+id/PasswordEditText"></EditText>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/store_prefs"
+        android:id="@+id/StorePrefsButton"></Button>
+
+</LinearLayout>
