@@ -1,8 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#404d6c">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <TableRow>
+                <TextView
+                    android:text="@string/reported_string"
+                    android:padding="5dip" />
+                <TextView
+                    android:id="@+id/reported"
+                    android:padding="5dip" />
+                <TextView
+                    android:text="@string/reported_by_string"
+                    android:layout_column="1"
+                    android:padding="5dip" />
+                <TextView
+                    android:id="@+id/reporter"
+                    android:padding="5dip" />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1" >
+            <TableRow>
+                <TextView
+                    android:padding="5dip"
+                    android:text="@string/modified_string" />
+                <TextView
+                    android:id="@+id/modified"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:padding="5dip"
+                    android:text="@string/status_string" />
+                <TextView
+                    android:id="@+id/status"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:padding="5dip"
+                    android:text="@string/product_string" />
+                <Spinner
+                    android:id="@+id/product_spinner"
+                    android_layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/product_string" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/component_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/component"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/component_string" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/version_string"
+                    android:padding="5dip" />
+                <TextView
+                    android:id="@+id/version"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/hardware_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/hardware"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/hardware_string" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/os_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/os"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/os_string" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/priority_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/priority"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/priority_string"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/severity_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/severity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/severity_string" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/assigned_to_string"
+                    android:padding="5dip" />
+                <TextView
+                    android:id="@+id/assigned_to"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/url_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/url"
+                    android:text="http://"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/depends_on_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/depends_on"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/blocks_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/blocks"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/cc_list_string"
+                    android:padding="5dip" />
+                <TextView
+                    android:id="@+id/cc_list"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/add_cc_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/add_cc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/add_bug_urls_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/add_bug_urls"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/orig_est_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/orig_est_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/deadline_string"
+                    android:padding="5dip" />
+                <EditText
+                    android:id="@+id/deadline_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0" >
+            <TableRow>
+                <TextView
+                    android:text="@string/additional_comments_string"
+                    android:padding="5dip" />
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:id="@+id/additional_comments_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300dip"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1" >
+            <TableRow>
+                <TextView
+                    android:text="@string/status_string"
+                    android:padding="5dip" />
+                <Spinner
+                    android:id="@+id/status_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/status_string" />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:id="@+id/submit_bug_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_gravity="center"
+            android:text="@string/submit_bug_changes_string" >
+        </Button>
+    </LinearLayout>
+     </LinearLayout>
+
+

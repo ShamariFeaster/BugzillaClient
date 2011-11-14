@@ -1,11 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-    <Button android:id="@+id/SeeMyBugsButton" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/see_my_bugs_button" android:layout_gravity="center_horizontal"></Button>
-    <Button android:id="@+id/BrowseBugsByProductButton" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/browse_bugs_by_product_button" android:layout_gravity="center_horizontal"></Button>
-    <Button android:id="@+id/ReportBugButton" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/report_bug_button" android:layout_gravity="center_horizontal"></Button>
-    
-</LinearLayout>
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:id="@+id/LoginLayoutRelative" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#455372">
+    <Button
+        android:background="#697388"
+        android:layout_height="40dip" 
+        android:layout_width="200dip" 
+        android:id="@+id/SeeMyBugsButton"
+        android:text="@string/see_my_bugs_button"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true" 
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dip" />
+    <Button 
+        android:background="#697388"
+        android:layout_height="40dip" 
+        android:layout_marginTop="20dip"
+        android:layout_width="200dip" 
+        android:id="@+id/FileBug" 
+        android:text="File a Bug" 
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/SeeMyBugsButton"
+        android:layout_alignLeft="@+id/SeeMyBugsButton" />
+    <Button 
+        android:background="#697388"
+        android:layout_height="40dip" 
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dip"
+        android:layout_width="200dip" 
+        android:id="@+id/BrowsBugs" 
+        android:text="Browse Bugs" 
+        android:layout_below="@+id/FileBug" 
+        android:layout_alignLeft="@+id/FileBug" />
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+</RelativeLayout>
+

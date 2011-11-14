@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:id="@+id/LoginLayoutRelative"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#455372">
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:id="@+id/component1"
+        android:text="component1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152dp"
+        android:layout_width="wrap_content"/>
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:id="@+id/component2"
+        android:text="component2"
+        android:layout_below="@+id/component1"
+        android:layout_alignLeft="@+id/component1"
+        android:layout_width="wrap_content"/>
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:id="@+id/component3"
+        android:text="component3"
+        android:layout_below="@+id/component2"
+        android:layout_alignLeft="@+id/component2"
+        android:layout_width="wrap_content"/>
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:id="@+id/component4"
+        android:text="component4"
+        android:layout_below="@+id/component3"
+        android:layout_alignLeft="@+id/component3"
+        android:layout_width="wrap_content"/>
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:id="@+id/component5"
+        android:text="component5"
+        android:layout_below="@+id/component4"
+        android:layout_alignLeft="@+id/component4"
+        android:layout_width="wrap_content"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Select Component"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_alignBottom="@+id/component1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"/>
+</RelativeLayout>

@@ -1,8 +1,6 @@
 
 package edu.fsu.cs.bugzillaclient;
 
-import org.json.JSONException;
-
 import org.json.JSONObject;
 
 import android.content.Intent;
@@ -31,7 +29,9 @@ public class LoginScreen extends BaseActivity {
 
         loginButton.setOnClickListener(new OnClickListener() {
 
+
             JSONObject loggedIn;
+
 
             public void onClick(View v) {
                 Log.w(TAG, mServer_url);
