@@ -12,10 +12,16 @@ import android.widget.EditText;
 import java.util.regex.Pattern;
 
 public class SettingsScreen extends BaseActivity {
+    private final String TAG = this.getClass().getSimpleName();
+    private static String sTooltipMessage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_screen_layout);
+        final String reg_ex_pattern = getResources().getString(R.string.UrlRegEx);
+        sTooltipMessage = getResources().getString(R.string.server_tooltip);
+
         // serverUrl should have a trailing backslash "/"
         final EditText serverEditText = (EditText) findViewById(R.id.serverUrlEditText);
         final EditText usernameEditText = (EditText) findViewById(R.id.UserNameEditText);
@@ -23,33 +29,40 @@ public class SettingsScreen extends BaseActivity {
         final Button storePrefsButton = (Button) findViewById(R.id.StorePrefsButton);
 
         // displaying currently set Url
-        serverEditText.setText(mPreferences.getString("server_url", ""));
+        serverEditText.setText(bPreferences.getString("server_url", ""));
 
-        serverEditText.addTextChangedListener(new MyTextWatcher(serverEditText));
+        serverEditText.addTextChangedListener(new MyTextWatcher(serverEditText, reg_ex_pattern));
 
         storePrefsButton.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                String serverHolder = serverEditText.getText().toString();
-                String usernameHolder = usernameEditText.getText().toString();
-                String passwordHolder = passwordEditText.getText().toString();
-                Boolean submitFlag = false;
-                if (!serverHolder.equals("")) {
-                    mEditor.putString("server_url", serverHolder);
-                    if (Pattern.matches("^http://{1}[a-zA-Z-0-9\\.\\-/]+[/]"
-                            , serverEditText.getText())) {
-                        submitFlag = true;
+                String server_holder = serverEditText.getText().toString();
+                String username_holder = usernameEditText.getText().toString();
+                String password_holder = passwordEditText.getText().toString();
+                Boolean submit_flag = false;
+
+                // Ensure well formed Url using RegEx. If not no submission
+                // allowed
+                if (!server_holder.equals("")) {
+                    bEditor.putString("server_url", server_holder);
+                    if (Pattern.matches(reg_ex_pattern, serverEditText.getText())) {
+                        submit_flag = true;
 
                     }
                 }
-                if (!usernameHolder.equals("")) {
-                    mEditor.putString("username", usernameHolder);
+
+                /*
+                 * this logic allows us to leave field blank without saving
+                 * empty string to preferences
+                 */
+                if (!username_holder.equals("")) {
+                    bEditor.putString("username", username_holder);
                 }
-                if (!passwordHolder.equals("")) {
-                    mEditor.putString("password", passwordHolder);
+                if (!password_holder.equals("")) {
+                    bEditor.putString("password", password_holder);
                 }
-                if (submitFlag) {
-                    mEditor.commit();
+                if (submit_flag) {
+                    bEditor.commit();
                     showToast("Preferences Saved");
                 } else {
                     showToast("You Input An Invalid Server Url. Preferences Not Saved");
@@ -57,24 +70,27 @@ public class SettingsScreen extends BaseActivity {
             }
 
         });
-
     }
 
+    /*
+     * This will display warning tool tip when URL is malformed
+     */
     class MyTextWatcher implements TextWatcher {
 
-        private final EditText et;
+        private final EditText mEditText;
+        private final String regex;
 
-        private MyTextWatcher(EditText editText) {
-            this.et = editText;
+        private MyTextWatcher(EditText editText, String rx) {
+            mEditText = editText;
+            regex = rx;
         }
 
         public void afterTextChanged(Editable s) {
             // TODO Auto-generated method stub
-            switch (et.getId()) {
+            switch (mEditText.getId()) {
                 case R.id.serverUrlEditText: {
-                    if (!Pattern.matches("^http://{1}[a-zA-Z-0-9\\.\\-/]+[/]", s)) {
-                        et.setError("Server Url Must Start With " +
-                                "\"http://\" and end with \"/\"");
+                    if (!Pattern.matches(regex, s)) {
+                        mEditText.setError(sTooltipMessage);
                     }
                     break;
                 }
@@ -82,12 +98,9 @@ public class SettingsScreen extends BaseActivity {
         }
 
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            // TODO Auto-generated method stub
-
         }
 
         public void onTextChanged(CharSequence s, int start, int before, int count) {
         }
-
     }
 }

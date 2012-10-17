@@ -1,60 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#404d6c">
+    android:background="@color/blueBackground"
+    android:orientation="vertical" >
+
     <TextView
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/serverUrlTextView"
         android:layout_width="wrap_content"
-        android:text="@string/server_name"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/serverUrlTextView"></TextView>
+        android:text="@string/server_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/serverToolTipTextView"
-        android:text="@string/server_tooltip"
-        android:textSize="11dip"
-        android:layout_gravity="center_horizontal"></TextView>
-    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/server_tooltip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="11dip" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/serverUrlEditText"
         android:layout_width="match_parent"
-        android:id="@+id/serverUrlEditText">
-        <requestFocus></requestFocus>
+        android:layout_height="wrap_content" >
+
+        <requestFocus >
+        </requestFocus>
     </EditText>
 
     <TextView
-        android:layout_height="wrap_content"
+        android:id="@+id/UserNameTextView"
         android:layout_width="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/user_name"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/UserNameTextView"></TextView>
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
     <EditText
-        android:layout_height="wrap_content"
+        android:id="@+id/UserNameEditText"
         android:layout_width="match_parent"
-        android:id="@+id/UserNameEditText"></EditText>
+        android:layout_height="wrap_content" >
+    </EditText>
+
     <TextView
-        android:layout_height="wrap_content"
+        android:id="@+id/PasswordTextView"
         android:layout_width="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/password"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/PasswordTextView"></TextView>
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
     <EditText
-        android:layout_height="wrap_content"
+        android:id="@+id/PasswordEditText"
         android:layout_width="match_parent"
-        android:inputType="textPassword"
-        android:id="@+id/PasswordEditText"></EditText>
-    <Button
         android:layout_height="wrap_content"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <Button
+        android:id="@+id/StorePrefsButton"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/store_prefs"
-        android:id="@+id/StorePrefsButton"></Button>
+        android:text="@string/store_prefs" >
+    </Button>
 
 </LinearLayout>

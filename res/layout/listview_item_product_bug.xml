@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.14"
+    android:background="@color/blueBackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/productBugSeverity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/productBugStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/productBugSummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+    </TextView>
+
+<TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1px"
+        android:background="@drawable/border"
+        android:layout_width="fill_parent"/>
+</LinearLayout>

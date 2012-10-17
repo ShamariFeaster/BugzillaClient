@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueBackground"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/ProductId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="10dip" >
+    </TextView>
+
+<TextView
+        android:id="@+id/textView1"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="1px"
+        android:background="@drawable/border"
+        android:layout_width="fill_parent"/>
+</LinearLayout>

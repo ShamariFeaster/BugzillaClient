@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LoginLayoutRelative"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#455372">
+    android:background="@color/blueBackground"
+    android:orientation="vertical" >
+
     <Spinner
         android:id="@+id/select"
+        android:layout_width="250dip"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="250dip"/>
-    <Button 
-        android:layout_marginTop="20dip"
-        android:text="Submit"
+        android:layout_centerVertical="true" />
+
+    <Button
         android:id="@+id/submit"
-        android:layout_below="@+id/select" 
+        android:layout_width="250dip"
         android:layout_height="40dip"
-        android:background="#697388"
-        android:textColor="#FFFFFF"
+        android:layout_below="@+id/select"
         android:layout_centerHorizontal="true"
-        android:layout_width="250dip"/>
-    <TextView 
-        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#697388"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+    <TextView
         android:id="@+id/title"
-        android:text="Product: "
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/select"
         android:layout_alignLeft="@+id/select"
-        android:layout_marginBottom="25dp"/>
-    <ImageView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Product: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
         android:id="@+id/logo"
-        android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"/>
-</RelativeLayout>
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/logo" />
 
+</RelativeLayout>
